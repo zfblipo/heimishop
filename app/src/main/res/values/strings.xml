@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">heimishop</string>
+
+    <string name="fragment_name1">首页</string>
+    <string name="fragment_name2">分类</string>
+    <string name="fragment_name3">购物车</string>
+    <string name="fragment_name4">我的</string>
+
 </resources>
