@@ -8,13 +8,14 @@ import android.view.ViewGroup;
 
 import com.google.gson.Gson;
 import com.lipo.heimishop.R;
+import com.lipo.heimishop.factory.PullScrollViewHelper;
 import com.lipo.heimishop.utils.MyHttpConn;
 
 /**
- * Created by lipo on 2017/6/5.
+ * Created by lipo on 2017/6/7.
  */
 
-public class MainFragment2 extends BaseFragment {
+public class Main1ItemFragment1 extends BaseFragment {
 
     private boolean isFrist = true;
     private MyHttpConn httpConn;
@@ -22,11 +23,13 @@ public class MainFragment2 extends BaseFragment {
     private int page;
     private boolean isShowing;
 
+    private PullScrollViewHelper pullHelper;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater,
                              @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return mainView = inflater.inflate(R.layout.main_fragment2, null);
+        return mainView = inflater.inflate(R.layout.cell_pull_scroll, null);
     }
 
     @Override
@@ -45,15 +48,23 @@ public class MainFragment2 extends BaseFragment {
     @Override
     public void onHiddenChanged(boolean hidden) {
         super.onHiddenChanged(hidden);
-
         if (!hidden & isFrist ) {
 //            getData();
         }
-
     }
 
     private void initView(){
+        pullHelper = new PullScrollViewHelper(mContext,mainView,inflater.inflate(R.layout.main1_item_fragment1,null)) {
+            @Override
+            protected void pullRefersh() {
 
+            }
+
+            @Override
+            protected void pullMore() {
+
+            }
+        };
     }
 
 }

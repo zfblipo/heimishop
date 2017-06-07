@@ -16,9 +16,9 @@ public class BaseHelper {
     protected View mainView;
     protected Resources resources;
 
-    public BaseHelper(Activity context,int id){
+    public BaseHelper(Activity context,View mainView){
         this.context = context;
-        this.mainView = context.findViewById(id);
+        this.mainView = mainView;
         resources = context.getResources();
     }
 

@@ -1,6 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/main_color_title">
+
+        <RelativeLayout
+            android:id="@+id/main1_title_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="8dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingRight="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="扫一扫"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/main_text3"
+                android:textSize="11sp"/>
+
+            <ImageView
+                android:layout_width="@dimen/title_image_height"
+                android:layout_height="@dimen/title_image_height"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/scan_icon"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/main1_title_news"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="16dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingRight="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="消息"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/main_text3"
+                android:textSize="11sp"/>
+
+            <ImageView
+                android:layout_width="@dimen/title_image_height"
+                android:layout_height="@dimen/title_image_height"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/home_messages_ic"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/main1_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/main1_title_news"
+            android:layout_toRightOf="@+id/main1_title_scan"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:background="@drawable/search_bg"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@mipmap/all_search_ic"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="搜索商品"
+                android:textColor="@color/main_text8"
+                android:layout_marginLeft="5dp"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:orientation="horizontal"
+        android:background="@color/main_color_title">
+
+        <TextView
+            android:id="@+id/main1_item1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="推荐"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="@color/main_red"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/main1_item2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="限时购"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="@color/main_text3"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/main1_item3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="新品"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="@color/main_text3"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/main_line"
+        android:layout_marginTop="-1px"/>
+
+    <View
+        android:id="@+id/main1_line"
+        android:layout_width="60dp"
+        android:layout_height="2dp"
+        android:background="@color/main_red"
+        android:layout_marginTop="-2dp"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/main1_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 </LinearLayout>

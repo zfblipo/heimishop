@@ -5,6 +5,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import com.lipo.heimishop.R;
 
@@ -13,7 +16,9 @@ import com.lipo.heimishop.R;
  */
 public class BaseFragment extends Fragment {
 
+	protected LayoutInflater inflater;
     public Activity mContext;
+	protected View mainView;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -22,6 +27,17 @@ public class BaseFragment extends Fragment {
         mContext = getActivity();
 
     }
+
+	@Nullable
+	@Override
+	public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+		this.inflater = inflater;
+		return super.onCreateView(inflater, container, savedInstanceState);
+	}
+
+	protected View findViewById(int id){
+		return mainView.findViewById(id);
+	}
     
     public void startIntent(Class<?> intentClass){
 		Intent intentBase = new Intent();

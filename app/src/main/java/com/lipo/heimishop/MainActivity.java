@@ -57,7 +57,7 @@ public class MainActivity extends BaseFragmentActivity {
 
         initFragment();
 
-        getStartup();
+//        getStartup();
     }
 
     private void initFragment() {

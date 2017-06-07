@@ -16,7 +16,6 @@ import com.lipo.heimishop.utils.MyHttpConn;
 
 public class MainFragment3 extends BaseFragment {
 
-    private View mainView;
     private boolean isFrist = true;
     private MyHttpConn httpConn;
     private Gson gson;

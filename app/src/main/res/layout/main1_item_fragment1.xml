@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/main1_item1_image_pager"
+        layout="@layout/cell_image_pager"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:background="@color/main_bg"/>
+
+    <include
+        android:id="@+id/main1_item1_hot"
+        layout="@layout/cell_main_direct"/>
+
+    <com.lipo.views.NoScrollListview
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:divider="@color/white"
+        android:dividerHeight="8dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:background="@color/main_bg"/>
+
+    <include
+        android:id="@+id/main1_item1_guess"
+        layout="@layout/cell_main_direct"/>
+
+    <com.lipo.views.NoScrollListview
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:divider="@color/white"
+        android:dividerHeight="8dp"/>
+
+</LinearLayout>
