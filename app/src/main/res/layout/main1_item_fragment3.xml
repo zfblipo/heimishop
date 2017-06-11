@@ -1,6 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/main_bg">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@mipmap/test_icon"
+        android:scaleType="centerCrop"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:background="@color/main_bg"/>
+
+    <include
+        android:id="@+id/main1_item3_hot"
+        layout="@layout/cell_main_direct"/>
+
+    <com.lipo.views.NoScrollGirdView
+        android:id="@+id/main1_item3_hot_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:numColumns="2"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:horizontalSpacing="16dp"
+        android:verticalSpacing="10dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:background="@color/main_bg"/>
+
+    <include
+        android:id="@+id/main1_item3_new"
+        layout="@layout/cell_main_direct"/>
+
+    <com.lipo.views.NoScrollGirdView
+        android:id="@+id/main1_item3_new_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:numColumns="2"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:horizontalSpacing="16dp"
+        android:verticalSpacing="10dp"/>
 
 </LinearLayout>

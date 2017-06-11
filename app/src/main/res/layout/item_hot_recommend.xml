@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingRight="16dp"
+    android:paddingLeft="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/main_border_line_borderl">
+
+        <ImageView
+            android:id="@+id/item_hotr_image"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/test_icon"
+            android:layout_margin="1px"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_centerVertical="true"
+            android:paddingRight="16dp"
+            android:layout_toRightOf="@+id/item_hotr_image">
+
+            <TextView
+                android:id="@+id/item_hotr_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="特价"
+                android:textColor="@color/white"
+                android:background="@drawable/cell_brown_bg2"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp"
+                android:textSize="11sp"/>
+
+            <TextView
+                android:id="@+id/item_hotr_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="美少女清凉一夏"
+                android:textColor="@color/main_text3"
+                android:layout_marginTop="8dp"
+                android:lines="1"
+                android:ellipsize="end"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/item_hotr_adv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="清新夏天带来不一样的感觉"
+                android:textColor="@color/main_text6"
+                android:layout_marginTop="3dp"
+                android:lines="1"
+                android:ellipsize="end"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/item_hotr_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥3999"
+                android:textColor="@color/main_color"
+                android:layout_marginTop="8dp"
+                android:lines="1"
+                android:ellipsize="end"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

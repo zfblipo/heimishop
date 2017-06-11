@@ -6,6 +6,8 @@ package com.lipo.heimishop.utils;
  */
 public class MyStatic {
 
+    public final static String SHAREPREFECENSSTRING = "lipo_heimi_shop";
+
     public static int meun_status = 0;//0表示没有滑动过，1表示显示出来菜单项
 
     public static int mine_stattus = 0;//0表示初始的，1表示滑到最上端了。

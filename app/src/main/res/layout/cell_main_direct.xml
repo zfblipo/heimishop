@@ -17,6 +17,7 @@
         android:textSize="16sp"/>
 
     <ImageView
+        android:id="@+id/cell_main_direct_icon"
         android:layout_width="16dp"
         android:layout_height="16dp"
         android:src="@mipmap/home_more_ic"

@@ -49,7 +49,7 @@ public class MainActivity extends BaseFragmentActivity {
 
         intent = getIntent();
         manager = getSupportFragmentManager();
-        preferences = getSharedPreferences("xing_big_user_info",
+        preferences = getSharedPreferences(MyStatic.SHAREPREFECENSSTRING,
                 Context.MODE_PRIVATE);
 
         httpConn = new MyHttpConn(mContext);

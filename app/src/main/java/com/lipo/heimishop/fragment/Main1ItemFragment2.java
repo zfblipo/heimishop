@@ -17,6 +17,8 @@ import com.lipo.heimishop.utils.MyHttpConn;
 
 public class Main1ItemFragment2 extends BaseFragment {
 
+    private View mainView2;
+
     private boolean isFrist = true;
     private MyHttpConn httpConn;
     private Gson gson;
@@ -25,11 +27,13 @@ public class Main1ItemFragment2 extends BaseFragment {
 
     private PullScrollViewHelper pullHelper;
 
+    private View contentView;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater,
                              @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return mainView = inflater.inflate(R.layout.cell_pull_scroll, null);
+        return mainView2 = inflater.inflate(R.layout.cell_pull_scroll, null);
     }
 
     @Override
@@ -54,7 +58,8 @@ public class Main1ItemFragment2 extends BaseFragment {
     }
 
     private void initView(){
-        pullHelper = new PullScrollViewHelper(mContext,mainView,inflater.inflate(R.layout.main1_item_fragment2,null)) {
+        contentView = LayoutInflater.from(mContext).inflate(R.layout.main1_item_fragment2,null);
+        pullHelper = new PullScrollViewHelper(mContext,mainView2,contentView) {
             @Override
             protected void pullRefersh() {
 

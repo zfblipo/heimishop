@@ -64,6 +64,10 @@ public abstract class PullScrollViewHelper {
 		anim.setDuration(800);
 		anim.setInterpolator(new LinearInterpolator());
 		anim.start();
+
+		cell_pull_scroll_content.setFocusable(true);
+		cell_pull_scroll_content.setFocusableInTouchMode(true);
+		cell_pull_scroll_content.requestFocus();
 		
 		cell_pull_scroll_view.setOnScrollListener(new MyListenerScrollView.OnScrollListener() {
 			

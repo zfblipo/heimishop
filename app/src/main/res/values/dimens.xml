@@ -6,7 +6,8 @@
     <dimen name="tab_icon_wh">22dp</dimen>
     <dimen name="tab_space">2dp</dimen>
 
-    <dimen name="title_height">54dp</dimen>
+    <dimen name="title_height">50dp</dimen>
     <dimen name="title_image_height">22dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 
 </resources>

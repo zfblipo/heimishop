@@ -39,15 +39,18 @@ public class ImagePagerFactory extends BaseHelper {
      */
     public ImagePagerFactory(Activity context, View mainView,List<ImageInfo> imageInfoList) {
         this(context, mainView);
+
+        cell_image_pager_view.setAdapter(new ImagePagerNewAdapter(context,imageInfoList,1));
+        cell_image_pager_view.setCurrentItem(imageInfoList.size()*20);
+
+        cell_image_pager_indicator.setPager(cell_image_pager_view,imageInfoList.size());
     }
 
     private void initView(){
         cell_image_pager_view = (ViewPager) findViewById(R.id.cell_image_pager_view);
         cell_image_pager_indicator = (MyPagerIndicator) findViewById(R.id.cell_image_pager_indicator);
 
-        cell_image_pager_view.setAdapter(new ImagePagerNewAdapter(context,imageInfoList,1));
 
-        cell_image_pager_indicator.setPager(cell_image_pager_view,imageInfoList.size());
 
     }
 

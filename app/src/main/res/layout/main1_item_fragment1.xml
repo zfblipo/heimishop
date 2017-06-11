@@ -18,6 +18,7 @@
         layout="@layout/cell_main_direct"/>
 
     <com.lipo.views.NoScrollListview
+        android:id="@+id/main1_item1_hot_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
@@ -33,11 +34,15 @@
         android:id="@+id/main1_item1_guess"
         layout="@layout/cell_main_direct"/>
 
-    <com.lipo.views.NoScrollListview
+    <com.lipo.views.NoScrollGirdView
+        android:id="@+id/main1_item1_guess_grid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        android:divider="@color/white"
-        android:dividerHeight="8dp"/>
+        android:numColumns="2"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:horizontalSpacing="16dp"
+        android:verticalSpacing="10dp"/>
 
 </LinearLayout>

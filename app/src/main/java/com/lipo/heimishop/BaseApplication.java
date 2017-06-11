@@ -29,7 +29,7 @@ public class BaseApplication extends Application {
         super.onCreate();
         instance = this;
         initImageLoader();
-        preferences = getSharedPreferences("xing_big_user_info",
+        preferences = getSharedPreferences(MyStatic.SHAREPREFECENSSTRING,
                 Context.MODE_PRIVATE);
 
         MyPublic.getStatusHeight(this);

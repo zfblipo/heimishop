@@ -3,59 +3,39 @@ package com.lipo.heimishop.views;
 import android.content.Context;
 import android.graphics.Rect;
 import android.support.v4.view.ViewPager;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewConfiguration;
 import android.view.ViewGroup;
-import android.widget.ScrollView;
 
 import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Created by lipo on 2017/4/27.
+ * Created by lipo on 2017/6/10.
  */
 
-public class MyPullListenerScrollView extends ScrollView {
+public class MySwipeRefreshLayout extends SwipeRefreshLayout {
 
     private int mTouchSlop;
     private int downX;
     private int downY;
+    private int tempX;
 
     private List<ViewPager> mViewPagers = new LinkedList<ViewPager>();
 
-    private MyListenerScrollView.OnScrollListener onScrollListener;
-
-    public MyPullListenerScrollView(Context context) {
+    public MySwipeRefreshLayout(Context context) {
         super(context);
         mTouchSlop = ViewConfiguration.get(context).getScaledTouchSlop();
     }
 
-    public MyPullListenerScrollView(Context context, AttributeSet attrs) {
+    public MySwipeRefreshLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
         mTouchSlop = ViewConfiguration.get(context).getScaledTouchSlop();
     }
 
-    public MyPullListenerScrollView(Context context, AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
-        mTouchSlop = ViewConfiguration.get(context).getScaledTouchSlop();
-    }
-
-    public void setOnScrollListener(MyListenerScrollView.OnScrollListener onScrollListener) {
-        this.onScrollListener = onScrollListener;
-    }
-
-    @Override
-    protected void onScrollChanged(int l, int t, int oldl, int oldt) {
-        super.onScrollChanged(l, t, oldl, oldt);
-        t += getHeight()-getPaddingTop()-getPaddingBottom();
-        onScrollListener.onListener(l, t, oldl, oldt);
-    }
-
-    public interface OnScrollListener{
-        public void onListener(int l, int t, int oldl, int oldt);
-    }
     /**
      */
     @Override
@@ -68,7 +48,7 @@ public class MyPullListenerScrollView extends ScrollView {
 
         switch (ev.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                downX  = (int) ev.getRawX();
+                downX = tempX = (int) ev.getRawX();
                 downY = (int) ev.getRawY();
                 break;
             case MotionEvent.ACTION_MOVE:
@@ -130,7 +110,5 @@ public class MyPullListenerScrollView extends ScrollView {
             getAlLViewPager(mViewPagers, this);
         }
     }
-
-
 
 }

@@ -4,6 +4,7 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimaryDark">@color/main_color_title</item>
+
     </style>
 
     <!--这是首页底部条目的样式-->
@@ -41,6 +42,10 @@
         <item name="android:windowEnterAnimation">@anim/push_buttom_in</item>
         <item name="android:windowExitAnimation">@anim/popup_bottom_out</item>
     </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 
 </resources>
